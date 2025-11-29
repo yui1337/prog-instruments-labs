@@ -1,5 +1,5 @@
-
 class Encryptor:
+    SHIFT = 2
     def cryptWord(self, word):
         if " " in word:
             raise ValueError()
@@ -7,7 +7,7 @@ class Encryptor:
         new_word = "";
         for i in range(len(word)):
             char_value = ord(word[i])
-            new_word += chr( char_value + 2)
+            new_word += chr( char_value + self.SHIFT)
 
         return new_word
 
@@ -15,10 +15,10 @@ class Encryptor:
         if " " in word:
             raise ValueError()
 
-        new_word = "";
+        new_word = ""
         for i in range(len(word)):
             char_value = ord(word[i])
-            new_word += str(char_value + 2)
+            new_word += str(char_value + self.SHIFT)
 
         return new_word
 
@@ -30,14 +30,14 @@ class Encryptor:
             for j in range(len(chars_to_replace)):
                 if chars_to_replace[j] == word[i]:
                     char_value = ord(word[i])
-                    result[i] = chr( char_value + 2)
+                    result[i] = chr( char_value + self.SHIFT)
         return "".join(result)
 
     def cryptSentence(self, sentence):
-        new_word = "";
+        new_word = ""
         for i in range(len(sentence)):
             char_value = ord(sentence[i])
-            new_word += chr( char_value + 2)
+            new_word += chr( char_value + self.SHIFT)
 
         return new_word
 
@@ -48,5 +48,3 @@ class Encryptor:
         words = self.getWords(sentence)
         for word in words:
             print("<%s>" % word)
-
-
