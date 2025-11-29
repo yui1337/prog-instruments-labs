@@ -4,25 +4,26 @@ class Encryptor:
     def shiftChar(self, ch) -> str:
         return chr(ord(ch) + self.SHIFT)
 
-    def cryptWord(self, word) -> str:
+    def check_spaces(self, word) -> None:
         if " " in word:
-            raise ValueError()
+            raise ValueError("This string contains spaces!")
+
+    def cryptWord(self, word) -> str:
+        self.check_spaces(word)
         new_word = ""
         for i in range(len(word)):
             new_word += self.shiftChar(word[i])
         return new_word
 
     def cryptWordToNumbers(self, word):
-        if " " in word:
-            raise ValueError()
+        self.check_spaces(word)
         new_word = ""
         for i in range(len(word)):
             new_word += self.shiftChar(word[i])
         return new_word
 
     def cryptWordWithCharsToReplace(self, word, chars_to_replace):
-        if " " in word:
-            raise ValueError()
+        self.check_spaces(word)
         result = list(word)
         for i in range(len(word)):
             for j in range(len(chars_to_replace)):
