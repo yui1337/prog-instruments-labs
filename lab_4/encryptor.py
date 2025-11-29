@@ -1,25 +1,23 @@
 class Encryptor:
     SHIFT = 2
-    def cryptWord(self, word):
+
+    def shiftChar(self, ch) -> str:
+        return chr(ord(ch) + self.SHIFT)
+
+    def cryptWord(self, word) -> str:
         if " " in word:
             raise ValueError()
-
-        new_word = "";
+        new_word = ""
         for i in range(len(word)):
-            char_value = ord(word[i])
-            new_word += chr( char_value + self.SHIFT)
-
+            new_word += self.shiftChar(word[i])
         return new_word
 
     def cryptWordToNumbers(self, word):
         if " " in word:
             raise ValueError()
-
         new_word = ""
         for i in range(len(word)):
-            char_value = ord(word[i])
-            new_word += str(char_value + self.SHIFT)
-
+            new_word += self.shiftChar(word[i])
         return new_word
 
     def cryptWordWithCharsToReplace(self, word, chars_to_replace):
@@ -29,16 +27,13 @@ class Encryptor:
         for i in range(len(word)):
             for j in range(len(chars_to_replace)):
                 if chars_to_replace[j] == word[i]:
-                    char_value = ord(word[i])
-                    result[i] = chr( char_value + self.SHIFT)
+                    result[i] = self.shiftChar(word[i])
         return "".join(result)
 
     def cryptSentence(self, sentence):
         new_word = ""
         for i in range(len(sentence)):
-            char_value = ord(sentence[i])
-            new_word += chr( char_value + self.SHIFT)
-
+            new_word += self.shiftChar(sentence[i])
         return new_word
 
     def getWords(self, sentence):
