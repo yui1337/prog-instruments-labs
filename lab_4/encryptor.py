@@ -24,12 +24,10 @@ class Encryptor:
 
     def cryptWordWithCharsToReplace(self, word, chars_to_replace):
         self.check_spaces(word)
-        result = list(word)
-        for i in range(len(word)):
-            for j in range(len(chars_to_replace)):
-                if chars_to_replace[j] == word[i]:
-                    result[i] = self.shiftChar(word[i])
-        return "".join(result)
+        replace_set = set(chars_to_replace)
+        result_chars = [self.shiftChar(ch) if ch in replace_set
+                        else ch for ch in word]
+        return "".join(result_chars)
 
     def cryptSentence(self, sentence):
         new_word = ""
