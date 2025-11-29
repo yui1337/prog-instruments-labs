@@ -12,24 +12,24 @@ class Encryptor:
         self.check_spaces(word)
         return "".join(self.shiftChar(ch) for ch in word)
 
-    def cryptWordToNumbers(self, word):
+    def cryptWordToNumbers(self, word) -> str:
         self.check_spaces(word)
         return "".join(str(ord(ch) + self.SHIFT) for ch in word)
 
-    def cryptWordWithCharsToReplace(self, word, chars_to_replace):
+    def cryptWordWithCharsToReplace(self, word, chars_to_replace) -> str:
         self.check_spaces(word)
         replace_set = set(chars_to_replace)
         result_chars = [self.shiftChar(ch) if ch in replace_set
                         else ch for ch in word]
         return "".join(result_chars)
 
-    def cryptSentence(self, sentence):
+    def cryptSentence(self, sentence) -> str:
         return "".join(self.shiftChar(ch) for ch in sentence)
 
-    def getWords(self, sentence):
+    def getWords(self, sentence) -> list[str]:
         return sentence.split()
 
-    def printWords(self, sentence):
+    def printWords(self, sentence) -> None:
         words = self.getWords(sentence)
         for word in words:
             print("<%s>" % word)
