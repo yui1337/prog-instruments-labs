@@ -10,17 +10,11 @@ class Encryptor:
 
     def cryptWord(self, word) -> str:
         self.check_spaces(word)
-        new_word = ""
-        for i in range(len(word)):
-            new_word += self.shiftChar(word[i])
-        return new_word
+        return "".join(self.shiftChar(ch) for ch in word)
 
     def cryptWordToNumbers(self, word):
         self.check_spaces(word)
-        new_word = ""
-        for i in range(len(word)):
-            new_word += self.shiftChar(word[i])
-        return new_word
+        return "".join(str(ord(ch) + self.SHIFT) for ch in word)
 
     def cryptWordWithCharsToReplace(self, word, chars_to_replace):
         self.check_spaces(word)
@@ -30,10 +24,7 @@ class Encryptor:
         return "".join(result_chars)
 
     def cryptSentence(self, sentence):
-        new_word = ""
-        for i in range(len(sentence)):
-            new_word += self.shiftChar(sentence[i])
-        return new_word
+        return "".join(self.shiftChar(ch) for ch in sentence)
 
     def getWords(self, sentence):
         return sentence.split()
