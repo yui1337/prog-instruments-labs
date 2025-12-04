@@ -1,0 +1,6 @@
+{
+  "input_file_path": "38.csv",
+  "patterns": "pattern.json",
+  "result": "result.json",
+  "variant": "38"
+}
