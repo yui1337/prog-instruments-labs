@@ -17,7 +17,7 @@ def calculate_checksum(row_numbers: List[int]) -> str:
 
     Надеюсь, я расписал это максимально подробно.
     Хотя что-то мне подсказывает, что обязательно найдется человек, у которого с этим возникнут проблемы.
-    Которому я отвечу, что все написано в докстринге ¯\_(ツ)_/¯
+    Которому я отвечу, что все написано в докстринге
 
     :param row_numbers: список целочисленных номеров строк csv-файла, на которых были найдены ошибки валидации
     :return: md5 хеш для проверки через github action
@@ -26,21 +26,14 @@ def calculate_checksum(row_numbers: List[int]) -> str:
     return hashlib.md5(json.dumps(row_numbers).encode('utf-8')).hexdigest()
 
 
-def serialize_result(variant: int, checksum: str) -> None:
+def serialize_result(variant: str, checksum: str, path: str) -> None:
     """
-    Метод для сериализации результатов лабораторной пишите сами.
-    Вам нужно заполнить данными - номером варианта и контрольной суммой - файл, лежащий в папке с лабораторной.
-    Файл называется, очевидно, result.json.
-
-    ВНИМАНИЕ, ВАЖНО! На json натравлен github action, который проверяет корректность выполнения лабораторной.
-    Так что не перемещайте, не переименовывайте и не изменяйте его структуру, если планируете успешно сдать лабу.
-
-    :param variant: номер вашего варианта
+    Метод для сериализации(сохранения) результатов
+    :param variant: номер варианта
     :param checksum: контрольная сумма, вычисленная через calculate_checksum()
+    :param path: имя файла для сохранения
     """
-    pass
+    result = {'variant': variant, 'checksum': checksum}
+    with open(path, 'w') as file:
+        json.dump(result, file, indent=2)
 
-
-if __name__ == "__main__":
-    print(calculate_checksum([1, 2, 3]))
-    print(calculate_checksum([3, 2, 1]))
