@@ -20,8 +20,10 @@ class FilesHandler:
             return data
         except FileNotFoundError:
             print(f"The file was not found.")
+            raise
         except Exception as e:
             print(f"An error occurred while reading the file: {str(e)}.")
+            raise
 
     @staticmethod
     def write_bytes(save_path: str, data: bytes) -> None:
@@ -36,8 +38,10 @@ class FilesHandler:
                 file.write(data)
         except FileNotFoundError:
             print(f"The file was not found.")
+            raise
         except Exception as e:
             print(f"An error occurred while writing the file: {str(e)}.")
+            raise
 
     @staticmethod
     def get_txt(file_name: str) -> str:
@@ -51,8 +55,10 @@ class FilesHandler:
                 return file.read()
         except FileNotFoundError:
             print(f"The file was not found.")
+            raise
         except Exception as e:
             print(f"An error occurred while reading the file: {str(e)}.")
+            raise
 
     @staticmethod
     def write_txt(save_path: str, text: str) -> None:
@@ -67,8 +73,10 @@ class FilesHandler:
                 file.write(text)
         except FileNotFoundError:
             print(f"The file was not found.")
+            raise
         except Exception as e:
             print(f"An error occurred while writing the file: {str(e)}.")
+            raise
 
     @staticmethod
     def get_json(file_name: str) -> dict[str, str]:
@@ -82,8 +90,10 @@ class FilesHandler:
                 return json.load(file)
         except FileNotFoundError:
             print(f"The file was not found.")
+            raise
         except Exception as e:
             print(f"An error occurred while reading json the file: {str(e)}.")
+            raise
 
     @staticmethod
     def write_json(save_path: str, data: dict) -> None:
@@ -98,8 +108,10 @@ class FilesHandler:
                 json.dump(data, file, ensure_ascii=False, indent=1)
         except FileNotFoundError:
             print(f"The file was not found.")
+            raise
         except Exception as e:
             print(f"An error occurred while writing json the file: {str(e)}.")
+            raise
 
     @staticmethod
     def write_public_key(save_path: str, public_key: rsa.RSAPublicKey) -> None:
@@ -115,8 +127,10 @@ class FilesHandler:
                                                          format=serialization.PublicFormat.SubjectPublicKeyInfo))
         except FileNotFoundError:
             print(f"The file was not found.")
+            raise
         except Exception as e:
             print(f"An error occurred while writing the file: {str(e)}.")
+            raise
 
     @staticmethod
     def write_private_key(save_path: str, private_key: rsa.RSAPrivateKey) -> None:
@@ -133,8 +147,10 @@ class FilesHandler:
                                                             encryption_algorithm=serialization.NoEncryption()))
         except FileNotFoundError:
             print(f"The file was not found.")
+            raise
         except Exception as e:
             print(f"An error occurred while writing the file: {str(e)}.")
+            raise
 
     @staticmethod
     def read_public_key(file_name: str) -> rsa.RSAPublicKey:
@@ -149,8 +165,10 @@ class FilesHandler:
                 return load_pem_public_key(public_bytes)
         except FileNotFoundError:
             print(f"The file was not found.")
+            raise
         except Exception as e:
             print(f"An error occurred while reading the file: {str(e)}.")
+            raise
 
     @staticmethod
     def read_private_key(file_name: str) -> rsa.RSAPrivateKey:
@@ -166,6 +184,7 @@ class FilesHandler:
                     private_bytes, password=None)
         except FileNotFoundError:
             print(f"The file was not found.")
+            raise
         except Exception as e:
             print(f"An error occurred while reading the file: {str(e)}.")
-
+            raise
