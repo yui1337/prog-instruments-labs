@@ -1,5 +1,9 @@
+import logging
+
 from crypto.asymmetric import Asymmetric
 from crypto.symmetric import Symmetric
+
+logger = logging.getLogger(__name__)
 
 class Hybrid:
     """
@@ -9,6 +13,8 @@ class Hybrid:
         self.symmetric = Symmetric()
         self.asymmetric = Asymmetric()
         self.key_len = key_length
+
+        logger.info("Инициализирована гибридная система")
 
     def generate_keys(self,
                       public_path: str,
@@ -26,9 +32,14 @@ class Hybrid:
         self.asymmetric.generate_asymmetric_keys()
         self.asymmetric.serialization_public_key(public_path)
         self.asymmetric.serialization_private_key(private_path)
+
+        logger.info("Ключи асимметричного алгоритма сгенерированы и сохранены")
+
         self.symmetric.generate_key(self.key_len)
         self.symmetric.key = self.asymmetric.encrypt_symmetric_key(public_path, self.symmetric.key, symmetric_path)
         self.symmetric.serialization_symmetric_key(symmetric_path)
+
+        logger.info("Ключ симметричного алгоритма сгенерирован и сохранён")
 
 
     def encrypt_data(self,
@@ -45,6 +56,9 @@ class Hybrid:
         :return: None
         """
         self.symmetric.key = self.asymmetric.decrypt_symmetric_key(private_path, encrypted_path)
+
+        logger.info("Симметричный ключ успешно расшифрован")
+
         self.symmetric.encrypt_text(file_name, save_path)
 
     def decrypt_data(self,
@@ -61,5 +75,8 @@ class Hybrid:
         :return: None
         """
         self.symmetric.key = self.asymmetric.decrypt_symmetric_key(private_path, encrypted_key_path)
+
+        logger.info("Симметричный ключ успешно расшифрован")
+
         self.symmetric.decrypt_text(encrypted_file_path, save_path)
 

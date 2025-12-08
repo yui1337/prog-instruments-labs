@@ -16,7 +16,7 @@ class Symmetric:
     """
     def __init__(self):
         self.key = None
-        logger.info("Symmetric: инициализация")
+        logger.debug("Инициализация")
 
     def generate_key(self, key_len: int) -> None:
         """
