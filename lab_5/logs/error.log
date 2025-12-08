@@ -1,0 +1,40 @@
+2025-12-08 18:34:21,372 - __main__ - ERROR - Файл не найден: C:\Torrent\prog-instruments-labs\lab_5\text_files/plain_text111.txt
+Traceback (most recent call last):
+  File "C:\Torrent\prog-instruments-labs\lab_5\main.py", line 60, in main
+    hybrid.encrypt_data(settings["plain_text"],
+  File "C:\Torrent\prog-instruments-labs\lab_5\crypto\hybrid.py", line 62, in encrypt_data
+    self.symmetric.encrypt_text(file_name, save_path)
+  File "C:\Torrent\prog-instruments-labs\lab_5\crypto\symmetric.py", line 66, in encrypt_text
+    text = FilesHandler.get_bytes(file_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Torrent\prog-instruments-labs\lab_5\fileshandler.py", line 18, in get_bytes
+    with open(file_name, 'rb') as file:
+         ^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Torrent\\prog-instruments-labs\\lab_5\\text_files/plain_text111.txt'
+2025-12-08 18:34:37,003 - __main__ - ERROR - Файл не найден: C:\Torrent\prog-instruments-labs\lab_5\text_files/encrypted_text22.txt
+Traceback (most recent call last):
+  File "C:\Torrent\prog-instruments-labs\lab_5\main.py", line 74, in main
+    hybrid.decrypt_data(settings["encrypted_text"],
+  File "C:\Torrent\prog-instruments-labs\lab_5\crypto\hybrid.py", line 81, in decrypt_data
+    self.symmetric.decrypt_text(encrypted_file_path, save_path)
+  File "C:\Torrent\prog-instruments-labs\lab_5\crypto\symmetric.py", line 95, in decrypt_text
+    encrypted_text = FilesHandler.get_bytes(encrypted_path)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Torrent\prog-instruments-labs\lab_5\fileshandler.py", line 18, in get_bytes
+    with open(file_name, 'rb') as file:
+         ^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Torrent\\prog-instruments-labs\\lab_5\\text_files/encrypted_text22.txt'
+2025-12-08 18:34:56,196 - __main__ - ERROR - Файл не найден: C:\Torrent\prog-instruments-labs\lab_5\crypto/keys/encrypted_symmetric_key2.txt
+Traceback (most recent call last):
+  File "C:\Torrent\prog-instruments-labs\lab_5\main.py", line 74, in main
+    hybrid.decrypt_data(settings["encrypted_text"],
+  File "C:\Torrent\prog-instruments-labs\lab_5\crypto\hybrid.py", line 77, in decrypt_data
+    self.symmetric.key = self.asymmetric.decrypt_symmetric_key(private_path, encrypted_key_path)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Torrent\prog-instruments-labs\lab_5\crypto\asymmetric.py", line 130, in decrypt_symmetric_key
+    encrypted_sym_key = FilesHandler.get_bytes(path_encrypted)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Torrent\prog-instruments-labs\lab_5\fileshandler.py", line 18, in get_bytes
+    with open(file_name, 'rb') as file:
+         ^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Torrent\\prog-instruments-labs\\lab_5\\crypto/keys/encrypted_symmetric_key2.txt'

@@ -1,0 +1,134 @@
+2025-12-08 18:34:01,899 - __main__ - INFO - Программа запущена.
+2025-12-08 18:34:01,915 - __main__ - INFO - Выбранный режим работы программы: generate
+2025-12-08 18:34:01,916 - __main__ - INFO - Загружены настройки из файла C:\Torrent\prog-instruments-labs\lab_5\settings.json
+2025-12-08 18:34:01,917 - crypto.hybrid - INFO - Инициализирована гибридная система
+2025-12-08 18:34:01,917 - __main__ - INFO - Начинается генерация ключей
+2025-12-08 18:34:01,917 - crypto.asymmetric - INFO - Начало генерации пары ключей
+2025-12-08 18:34:01,964 - crypto.asymmetric - INFO - Пара ключей успешно сгенерирована
+2025-12-08 18:34:01,964 - crypto.asymmetric - INFO - Сохранение открытого ключа в файл C:\Torrent\prog-instruments-labs\lab_5\crypto/keys/public_key.pem
+2025-12-08 18:34:01,967 - crypto.asymmetric - INFO - Ключ успешно сохранён
+2025-12-08 18:34:01,967 - crypto.asymmetric - INFO - Сохранение закрытого ключа в файл C:\Torrent\prog-instruments-labs\lab_5\crypto/keys/private_key.pem
+2025-12-08 18:34:01,968 - crypto.asymmetric - INFO - Ключ успешно сохранён
+2025-12-08 18:34:01,968 - crypto.hybrid - INFO - Ключи асимметричного алгоритма сгенерированы и сохранены
+2025-12-08 18:34:01,968 - crypto.symmetric - INFO - Попытка генерации ключа длиной 128 бит
+2025-12-08 18:34:01,968 - crypto.symmetric - INFO - Ключ длиной 128 бит успешно сгенерирован
+2025-12-08 18:34:01,969 - crypto.asymmetric - INFO - Начало шифрования ключа симметричного алгоритма асимметричным
+2025-12-08 18:34:01,969 - crypto.asymmetric - INFO - Загрузка ключа из файла C:\Torrent\prog-instruments-labs\lab_5\crypto/keys/public_key.pem
+2025-12-08 18:34:01,970 - crypto.asymmetric - INFO - Ключ успешно загружен
+2025-12-08 18:34:01,970 - crypto.asymmetric - INFO - Открытый ключ считан из C:\Torrent\prog-instruments-labs\lab_5\crypto/keys/public_key.pem
+2025-12-08 18:34:01,971 - crypto.asymmetric - INFO - Открытый ключ зашифрован
+2025-12-08 18:34:01,972 - crypto.asymmetric - INFO - Открытый ключ сохранён в зашифрованном виде по пути C:\Torrent\prog-instruments-labs\lab_5\crypto/keys/encrypted_symmetric_key.txt
+2025-12-08 18:34:01,972 - crypto.symmetric - INFO - Сохранение ключа в файл C:\Torrent\prog-instruments-labs\lab_5\crypto/keys/encrypted_symmetric_key.txt
+2025-12-08 18:34:01,973 - crypto.symmetric - INFO - Ключ успешно сохранён
+2025-12-08 18:34:01,973 - crypto.hybrid - INFO - Ключ симметричного алгоритма сгенерирован и сохранён
+2025-12-08 18:34:01,973 - __main__ - INFO - Ключи успешно сгенерированы и сохранены в C:\Torrent\prog-instruments-labs\lab_5\crypto/keys/public_key.pem, 
+C:\Torrent\prog-instruments-labs\lab_5\crypto/keys/private_key.pem, 
+C:\Torrent\prog-instruments-labs\lab_5\crypto/keys/encrypted_symmetric_key.txt.
+2025-12-08 18:34:01,973 - __main__ - INFO - Программа выполнена успешно.
+2025-12-08 18:34:05,984 - __main__ - INFO - Программа запущена.
+2025-12-08 18:34:06,001 - __main__ - INFO - Выбранный режим работы программы: encrypt
+2025-12-08 18:34:06,002 - __main__ - INFO - Загружены настройки из файла C:\Torrent\prog-instruments-labs\lab_5\settings.json
+2025-12-08 18:34:06,002 - crypto.hybrid - INFO - Инициализирована гибридная система
+2025-12-08 18:34:06,003 - __main__ - INFO - Начинается шифрование текста из файлаC:\Torrent\prog-instruments-labs\lab_5\text_files/plain_text.txt с сохранениемв файл C:\Torrent\prog-instruments-labs\lab_5\text_files/encrypted_text.txt
+2025-12-08 18:34:06,003 - crypto.asymmetric - INFO - Начало дешифрования ключа симметричного алгоритма ассиметричным
+2025-12-08 18:34:06,003 - crypto.asymmetric - INFO - Загрузка ключа из файла C:\Torrent\prog-instruments-labs\lab_5\crypto/keys/private_key.pem
+2025-12-08 18:34:06,077 - crypto.asymmetric - INFO - Ключ успешно загружен
+2025-12-08 18:34:06,145 - crypto.asymmetric - INFO - Закрытый ключ считан из C:\Torrent\prog-instruments-labs\lab_5\crypto/keys/private_key.pem
+2025-12-08 18:34:06,147 - crypto.asymmetric - INFO - Зашифрованный ключ симметричного алгоритма считан из C:\Torrent\prog-instruments-labs\lab_5\crypto/keys/encrypted_symmetric_key.txt
+2025-12-08 18:34:06,149 - crypto.asymmetric - INFO - Ключ симметричного алгоритма успешно дешифрован
+2025-12-08 18:34:06,150 - crypto.hybrid - INFO - Симметричный ключ успешно расшифрован
+2025-12-08 18:34:06,150 - crypto.symmetric - INFO - Начало шифрования файла C:\Torrent\prog-instruments-labs\lab_5\text_files/plain_text.txt
+2025-12-08 18:34:06,152 - crypto.symmetric - INFO - Шифрование завершено, сохранено 1840 байт в C:\Torrent\prog-instruments-labs\lab_5\text_files/encrypted_text.txt
+2025-12-08 18:34:06,153 - __main__ - INFO - Текст успешно зашифрован и сохранён в указанный файл
+2025-12-08 18:34:06,153 - __main__ - INFO - Программа выполнена успешно.
+2025-12-08 18:34:08,643 - __main__ - INFO - Программа запущена.
+2025-12-08 18:34:08,660 - __main__ - INFO - Выбранный режим работы программы: decrypt
+2025-12-08 18:34:08,661 - __main__ - INFO - Загружены настройки из файла C:\Torrent\prog-instruments-labs\lab_5\settings.json
+2025-12-08 18:34:08,661 - crypto.hybrid - INFO - Инициализирована гибридная система
+2025-12-08 18:34:08,661 - __main__ - INFO - Начинается дешифрование текста из файлаC:\Torrent\prog-instruments-labs\lab_5\text_files/encrypted_text.txt с сохранениемв файл C:\Torrent\prog-instruments-labs\lab_5\text_files/decrypted_text.txt
+2025-12-08 18:34:08,663 - crypto.asymmetric - INFO - Начало дешифрования ключа симметричного алгоритма ассиметричным
+2025-12-08 18:34:08,663 - crypto.asymmetric - INFO - Загрузка ключа из файла C:\Torrent\prog-instruments-labs\lab_5\crypto/keys/private_key.pem
+2025-12-08 18:34:08,736 - crypto.asymmetric - INFO - Ключ успешно загружен
+2025-12-08 18:34:08,806 - crypto.asymmetric - INFO - Закрытый ключ считан из C:\Torrent\prog-instruments-labs\lab_5\crypto/keys/private_key.pem
+2025-12-08 18:34:08,806 - crypto.asymmetric - INFO - Зашифрованный ключ симметричного алгоритма считан из C:\Torrent\prog-instruments-labs\lab_5\crypto/keys/encrypted_symmetric_key.txt
+2025-12-08 18:34:08,810 - crypto.asymmetric - INFO - Ключ симметричного алгоритма успешно дешифрован
+2025-12-08 18:34:08,810 - crypto.hybrid - INFO - Симметричный ключ успешно расшифрован
+2025-12-08 18:34:08,811 - crypto.symmetric - INFO - Начало дешифрования файла C:\Torrent\prog-instruments-labs\lab_5\text_files/encrypted_text.txt
+2025-12-08 18:34:08,812 - crypto.symmetric - INFO - Дешифрование завершено, сохранено 1093 символов в C:\Torrent\prog-instruments-labs\lab_5\text_files/decrypted_text.txt
+2025-12-08 18:34:08,813 - __main__ - INFO - Текст успешно дешифрован в указанный файл
+2025-12-08 18:34:08,813 - __main__ - INFO - Программа выполнена успешно.
+2025-12-08 18:34:21,207 - __main__ - INFO - Программа запущена.
+2025-12-08 18:34:21,223 - __main__ - INFO - Выбранный режим работы программы: encrypt
+2025-12-08 18:34:21,224 - __main__ - INFO - Загружены настройки из файла C:\Torrent\prog-instruments-labs\lab_5\settings.json
+2025-12-08 18:34:21,225 - crypto.hybrid - INFO - Инициализирована гибридная система
+2025-12-08 18:34:21,225 - __main__ - INFO - Начинается шифрование текста из файлаC:\Torrent\prog-instruments-labs\lab_5\text_files/plain_text111.txt с сохранениемв файл C:\Torrent\prog-instruments-labs\lab_5\text_files/encrypted_text.txt
+2025-12-08 18:34:21,226 - crypto.asymmetric - INFO - Начало дешифрования ключа симметричного алгоритма ассиметричным
+2025-12-08 18:34:21,226 - crypto.asymmetric - INFO - Загрузка ключа из файла C:\Torrent\prog-instruments-labs\lab_5\crypto/keys/private_key.pem
+2025-12-08 18:34:21,300 - crypto.asymmetric - INFO - Ключ успешно загружен
+2025-12-08 18:34:21,368 - crypto.asymmetric - INFO - Закрытый ключ считан из C:\Torrent\prog-instruments-labs\lab_5\crypto/keys/private_key.pem
+2025-12-08 18:34:21,369 - crypto.asymmetric - INFO - Зашифрованный ключ симметричного алгоритма считан из C:\Torrent\prog-instruments-labs\lab_5\crypto/keys/encrypted_symmetric_key.txt
+2025-12-08 18:34:21,371 - crypto.asymmetric - INFO - Ключ симметричного алгоритма успешно дешифрован
+2025-12-08 18:34:21,372 - crypto.hybrid - INFO - Симметричный ключ успешно расшифрован
+2025-12-08 18:34:21,372 - crypto.symmetric - INFO - Начало шифрования файла C:\Torrent\prog-instruments-labs\lab_5\text_files/plain_text111.txt
+2025-12-08 18:34:21,372 - __main__ - ERROR - Файл не найден: C:\Torrent\prog-instruments-labs\lab_5\text_files/plain_text111.txt
+Traceback (most recent call last):
+  File "C:\Torrent\prog-instruments-labs\lab_5\main.py", line 60, in main
+    hybrid.encrypt_data(settings["plain_text"],
+  File "C:\Torrent\prog-instruments-labs\lab_5\crypto\hybrid.py", line 62, in encrypt_data
+    self.symmetric.encrypt_text(file_name, save_path)
+  File "C:\Torrent\prog-instruments-labs\lab_5\crypto\symmetric.py", line 66, in encrypt_text
+    text = FilesHandler.get_bytes(file_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Torrent\prog-instruments-labs\lab_5\fileshandler.py", line 18, in get_bytes
+    with open(file_name, 'rb') as file:
+         ^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Torrent\\prog-instruments-labs\\lab_5\\text_files/plain_text111.txt'
+2025-12-08 18:34:36,838 - __main__ - INFO - Программа запущена.
+2025-12-08 18:34:36,855 - __main__ - INFO - Выбранный режим работы программы: decrypt
+2025-12-08 18:34:36,856 - __main__ - INFO - Загружены настройки из файла C:\Torrent\prog-instruments-labs\lab_5\settings.json
+2025-12-08 18:34:36,857 - crypto.hybrid - INFO - Инициализирована гибридная система
+2025-12-08 18:34:36,857 - __main__ - INFO - Начинается дешифрование текста из файлаC:\Torrent\prog-instruments-labs\lab_5\text_files/encrypted_text22.txt с сохранениемв файл C:\Torrent\prog-instruments-labs\lab_5\text_files/decrypted_text.txt
+2025-12-08 18:34:36,857 - crypto.asymmetric - INFO - Начало дешифрования ключа симметричного алгоритма ассиметричным
+2025-12-08 18:34:36,858 - crypto.asymmetric - INFO - Загрузка ключа из файла C:\Torrent\prog-instruments-labs\lab_5\crypto/keys/private_key.pem
+2025-12-08 18:34:36,932 - crypto.asymmetric - INFO - Ключ успешно загружен
+2025-12-08 18:34:37,000 - crypto.asymmetric - INFO - Закрытый ключ считан из C:\Torrent\prog-instruments-labs\lab_5\crypto/keys/private_key.pem
+2025-12-08 18:34:37,000 - crypto.asymmetric - INFO - Зашифрованный ключ симметричного алгоритма считан из C:\Torrent\prog-instruments-labs\lab_5\crypto/keys/encrypted_symmetric_key.txt
+2025-12-08 18:34:37,003 - crypto.asymmetric - INFO - Ключ симметричного алгоритма успешно дешифрован
+2025-12-08 18:34:37,003 - crypto.hybrid - INFO - Симметричный ключ успешно расшифрован
+2025-12-08 18:34:37,003 - crypto.symmetric - INFO - Начало дешифрования файла C:\Torrent\prog-instruments-labs\lab_5\text_files/encrypted_text22.txt
+2025-12-08 18:34:37,003 - __main__ - ERROR - Файл не найден: C:\Torrent\prog-instruments-labs\lab_5\text_files/encrypted_text22.txt
+Traceback (most recent call last):
+  File "C:\Torrent\prog-instruments-labs\lab_5\main.py", line 74, in main
+    hybrid.decrypt_data(settings["encrypted_text"],
+  File "C:\Torrent\prog-instruments-labs\lab_5\crypto\hybrid.py", line 81, in decrypt_data
+    self.symmetric.decrypt_text(encrypted_file_path, save_path)
+  File "C:\Torrent\prog-instruments-labs\lab_5\crypto\symmetric.py", line 95, in decrypt_text
+    encrypted_text = FilesHandler.get_bytes(encrypted_path)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Torrent\prog-instruments-labs\lab_5\fileshandler.py", line 18, in get_bytes
+    with open(file_name, 'rb') as file:
+         ^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Torrent\\prog-instruments-labs\\lab_5\\text_files/encrypted_text22.txt'
+2025-12-08 18:34:56,032 - __main__ - INFO - Программа запущена.
+2025-12-08 18:34:56,049 - __main__ - INFO - Выбранный режим работы программы: decrypt
+2025-12-08 18:34:56,050 - __main__ - INFO - Загружены настройки из файла C:\Torrent\prog-instruments-labs\lab_5\settings.json
+2025-12-08 18:34:56,050 - crypto.hybrid - INFO - Инициализирована гибридная система
+2025-12-08 18:34:56,051 - __main__ - INFO - Начинается дешифрование текста из файлаC:\Torrent\prog-instruments-labs\lab_5\text_files/encrypted_text.txt с сохранениемв файл C:\Torrent\prog-instruments-labs\lab_5\text_files/decrypted_text.txt
+2025-12-08 18:34:56,051 - crypto.asymmetric - INFO - Начало дешифрования ключа симметричного алгоритма ассиметричным
+2025-12-08 18:34:56,051 - crypto.asymmetric - INFO - Загрузка ключа из файла C:\Torrent\prog-instruments-labs\lab_5\crypto/keys/private_key.pem
+2025-12-08 18:34:56,127 - crypto.asymmetric - INFO - Ключ успешно загружен
+2025-12-08 18:34:56,196 - crypto.asymmetric - INFO - Закрытый ключ считан из C:\Torrent\prog-instruments-labs\lab_5\crypto/keys/private_key.pem
+2025-12-08 18:34:56,196 - __main__ - ERROR - Файл не найден: C:\Torrent\prog-instruments-labs\lab_5\crypto/keys/encrypted_symmetric_key2.txt
+Traceback (most recent call last):
+  File "C:\Torrent\prog-instruments-labs\lab_5\main.py", line 74, in main
+    hybrid.decrypt_data(settings["encrypted_text"],
+  File "C:\Torrent\prog-instruments-labs\lab_5\crypto\hybrid.py", line 77, in decrypt_data
+    self.symmetric.key = self.asymmetric.decrypt_symmetric_key(private_path, encrypted_key_path)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Torrent\prog-instruments-labs\lab_5\crypto\asymmetric.py", line 130, in decrypt_symmetric_key
+    encrypted_sym_key = FilesHandler.get_bytes(path_encrypted)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Torrent\prog-instruments-labs\lab_5\fileshandler.py", line 18, in get_bytes
+    with open(file_name, 'rb') as file:
+         ^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Torrent\\prog-instruments-labs\\lab_5\\crypto/keys/encrypted_symmetric_key2.txt'
