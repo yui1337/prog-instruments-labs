@@ -1,0 +1,5 @@
+env: dev
+paths:
+  symmetric_key: keys/dev/symmetric.key
+  public_key: keys/dev/public.pem
+  private_key: keys/dev/private.pem

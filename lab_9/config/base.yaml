@@ -1,0 +1,4 @@
+paths:
+  plain_text: text_files/plain_text.txt
+  encrypted_text: text_files/encrypted_text.txt
+  decrypted_text: text_files/decrypted_text.txt

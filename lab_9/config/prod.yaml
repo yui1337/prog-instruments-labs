@@ -1,0 +1,5 @@
+env: prod
+paths:
+  symmetric_key: keys/prod/secure_symmetric.key
+  public_key: keys/prod/secure_public.pem
+  private_key: keys/prod/secure_private.pem
